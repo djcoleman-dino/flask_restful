@@ -1,6 +1,4 @@
-Flask
-Flask-RESTful
-Flask-JWT
-Flask-SQLAlchemy
-uwsgi
-psycopg2
+Flask==1.1.2
+Flask-RESTful==0.3.8
+Flask-JWT==0.3.2
+Flask-SQLAlchemy==2.5.1
