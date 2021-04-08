@@ -16,12 +16,6 @@ app.config['SQLALCHEMY_TRACK_NOTIFICATIONS'] = False
 app.secret_key = 'billy'
 api = Api(app)
 
-
-@app.before_request
-def create_tables():
-    db.create_all()
-
-
 jwt = JWT(app, authenticate, identity)
 
 api.add_resource(Store, '/store/<string:name>')
@@ -33,4 +27,4 @@ api.add_resource(UserRegister, '/register')
 
 if __name__ == '__main__':
     db.init_app(app)
-    app.run(port=5000)
+    app.run(port=5000, db=True)
