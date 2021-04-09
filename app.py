@@ -1,4 +1,3 @@
-# source venv/bin/activate - activate virtual env
 import os
 
 from flask import Flask
